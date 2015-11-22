@@ -9,6 +9,10 @@
 /* Begin PBXBuildFile section */
 		FED99DE41B9B80990025227F /* main.cpp in Sources */ = {isa = PBXBuildFile; fileRef = FED99DE31B9B80990025227F /* main.cpp */; };
 		FED99DE61B9B80990025227F /* LearningCPPProject.1 in CopyFiles */ = {isa = PBXBuildFile; fileRef = FED99DE51B9B80990025227F /* LearningCPPProject.1 */; };
+		FEDA7B221B9BA39E004B486C /* libboost_thread-mt.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = FEDA7B211B9BA39E004B486C /* libboost_thread-mt.dylib */; };
+		FEDA7B241B9BA3D6004B486C /* libboost_date_time-mt.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = FEDA7B231B9BA3D6004B486C /* libboost_date_time-mt.dylib */; };
+		FEDA7B261B9BA688004B486C /* libboost_system-mt.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = FEDA7B251B9BA688004B486C /* libboost_system-mt.dylib */; };
+		FEDA7B291B9BB44D004B486C /* FIFOTwoRW.cpp in Sources */ = {isa = PBXBuildFile; fileRef = FEDA7B271B9BB44D004B486C /* FIFOTwoRW.cpp */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXCopyFilesBuildPhase section */
@@ -28,6 +32,11 @@
 		FED99DE01B9B80990025227F /* LearningCPPProject */ = {isa = PBXFileReference; explicitFileType = "compiled.mach-o.executable"; includeInIndex = 0; path = LearningCPPProject; sourceTree = BUILT_PRODUCTS_DIR; };
 		FED99DE31B9B80990025227F /* main.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = main.cpp; sourceTree = "<group>"; };
 		FED99DE51B9B80990025227F /* LearningCPPProject.1 */ = {isa = PBXFileReference; lastKnownFileType = text.man; path = LearningCPPProject.1; sourceTree = "<group>"; };
+		FEDA7B211B9BA39E004B486C /* libboost_thread-mt.dylib */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; path = "libboost_thread-mt.dylib"; sourceTree = "<group>"; };
+		FEDA7B231B9BA3D6004B486C /* libboost_date_time-mt.dylib */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; path = "libboost_date_time-mt.dylib"; sourceTree = "<group>"; };
+		FEDA7B251B9BA688004B486C /* libboost_system-mt.dylib */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; path = "libboost_system-mt.dylib"; sourceTree = "<group>"; };
+		FEDA7B271B9BB44D004B486C /* FIFOTwoRW.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = FIFOTwoRW.cpp; sourceTree = "<group>"; };
+		FEDA7B281B9BB44D004B486C /* FIFOTwoRW.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FIFOTwoRW.h; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -35,6 +44,9 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				FEDA7B261B9BA688004B486C /* libboost_system-mt.dylib in Frameworks */,
+				FEDA7B241B9BA3D6004B486C /* libboost_date_time-mt.dylib in Frameworks */,
+				FEDA7B221B9BA39E004B486C /* libboost_thread-mt.dylib in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -44,6 +56,9 @@
 		FED99DD71B9B80990025227F = {
 			isa = PBXGroup;
 			children = (
+				FEDA7B231B9BA3D6004B486C /* libboost_date_time-mt.dylib */,
+				FEDA7B251B9BA688004B486C /* libboost_system-mt.dylib */,
+				FEDA7B211B9BA39E004B486C /* libboost_thread-mt.dylib */,
 				FED99DE21B9B80990025227F /* LearningCPPProject */,
 				FED99DE11B9B80990025227F /* Products */,
 			);
@@ -62,6 +77,8 @@
 			children = (
 				FED99DE31B9B80990025227F /* main.cpp */,
 				FED99DE51B9B80990025227F /* LearningCPPProject.1 */,
+				FEDA7B271B9BB44D004B486C /* FIFOTwoRW.cpp */,
+				FEDA7B281B9BB44D004B486C /* FIFOTwoRW.h */,
 			);
 			path = LearningCPPProject;
 			sourceTree = "<group>";
@@ -118,6 +135,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				FED99DE41B9B80990025227F /* main.cpp in Sources */,
+				FEDA7B291B9BB44D004B486C /* FIFOTwoRW.cpp in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -197,6 +215,16 @@
 		FED99DEA1B9B80990025227F /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				HEADER_SEARCH_PATHS = (
+					"$(inherited)",
+					/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/include,
+					/opt/local/include/,
+				);
+				LIBRARY_SEARCH_PATHS = (
+					/opt/local/lib/,
+					"$(PROJECT_DIR)",
+				);
+				New_Setting = "";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 			};
 			name = Debug;
@@ -204,6 +232,16 @@
 		FED99DEB1B9B80990025227F /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				HEADER_SEARCH_PATHS = (
+					"$(inherited)",
+					/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/include,
+					/opt/local/include/,
+				);
+				LIBRARY_SEARCH_PATHS = (
+					/opt/local/lib/,
+					"$(PROJECT_DIR)",
+				);
+				New_Setting = "";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 			};
 			name = Release;
@@ -227,6 +265,7 @@
 				FED99DEB1B9B80990025227F /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
